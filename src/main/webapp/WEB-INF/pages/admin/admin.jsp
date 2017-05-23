@@ -18,14 +18,10 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-    <style>
-        select {
-            width: 300px;
-            height: 300px;
-        }</style>
+
 </head>
 <body>
-<h2 align="Center">All Directories</h2>
+<h2 align="Center">Admin panel</h2>
 
 
 <nav role="navigation" class="navbar navbar-default">
@@ -43,28 +39,17 @@
     <!-- default menu -->
     <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="productView">show all Product View</a></li>
-            <li><a href="productType">show all Product Type</a></li>
-            <li><a href="manufacturer">show all manufacturer</a></li>
-            <li><a href="products">show all products</a></li>
-            <li><a href="admin/admin">Admin</a></li>
+            <li class="active"><a href="../">Home</a></li>
+            <li><a href="addProduct">Create</a></li>
+            <li><a href="updateProduct">Update</a></li>
+            <li><a href="delProduct">Delete</a></li>
+
         </ul>
     </div>
 </nav>
 
-<h1 align="Center"><p class="text-primary">Welcome to shop. Select item of menu</p></h1>
+<h1 align="Center"><p class="text-primary">Admin panel</p></h1>
 
-<div align="Center">
-    <select name="select" multiple>
-        <c:forEach var="productView" items="${prodView}">
-            <optgroup label="${productView.productName}">
-                <c:forEach var="productType" items="${prodType}">
-                    <option value="${productType.typeId}">${productType.typeName}</option>
-                </c:forEach>
-            </optgroup>
-        </c:forEach>
-    </select>
-</div>
+
 </body>
 </html>

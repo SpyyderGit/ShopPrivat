@@ -43,6 +43,7 @@
             <li><a href="productType">show all Product Type</a></li>
             <li><a href="manufacturer">show all manufacturer</a></li>
             <li class="active"><a href="#">show all products</a></li>
+            <li><a href="admin/admin">Admin</a></li>
         </ul>
     </div>
 

@@ -12,9 +12,10 @@ public class Product {
     private int mrIdFk;
     private int typeIdFk;
 
-//    private ProductMr mrIdFk;
-//    private ProductType typeIdFk;
 
+    public Product() {
+
+    }
 
     public Product(int productId, String productName, double productPrice, String productRemark, String sklad, int mrIdFk, int typeIdFk) {
         this.productId = productId;

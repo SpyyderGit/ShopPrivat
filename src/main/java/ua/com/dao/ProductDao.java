@@ -23,4 +23,5 @@ public interface ProductDao {
     List<Product> getByPrice(double price);
 
     List<Product> getAllProducts();
+
 }

@@ -5,9 +5,11 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.SimpleDriverDataSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 import ua.com.dao.ProductDao;
 import ua.com.dao.ProductMrDao;
 import ua.com.dao.ProductTypeDao;
@@ -56,7 +58,9 @@ public class ShopController {
 
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String getIndex() {
+    public String getIndex(ModelMap modelMap) {
+        modelMap.addAttribute("prodView", productViewService.getAllProductsViewService());
+        modelMap.addAttribute("prodType", typeService.getAllProductsTypeService());
         return "index";
     }
 
@@ -82,5 +86,20 @@ public class ShopController {
     public String getProducts(ModelMap modelMap) {
         modelMap.addAttribute("name", productService.getAllProductsService());
         return "products";
+    }
+
+    @RequestMapping(value = "/byPrice", method = RequestMethod.GET)
+    public ModelAndView byPrice() {
+        Product product = new Product();
+        return new ModelAndView("byPrice", "command", product);
+    }
+
+
+    @RequestMapping(value = "/byPriceResult", method = RequestMethod.POST)
+    public String byPriceResult(@ModelAttribute("/WEB-INF/shop-servlet.xml") Product product, ModelMap modelMap) {
+
+        modelMap.addAttribute("price", productService.getByPriceService(product.getProductPrice()));
+
+        return "byPriceResult";
     }
 }
