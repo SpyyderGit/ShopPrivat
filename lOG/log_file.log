@@ -1,0 +1,19 @@
+2017-05-23 08:47:38 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-23 08:48:58 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-23 08:58:46 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-23 08:58:46 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-23 09:09:10 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-05-23 09:09:10 INFO  SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-05-23 09:09:10 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-23 09:09:10 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-23 09:31:09 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-05-23 09:31:09 INFO  SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-05-23 09:31:09 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-23 09:31:09 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-23 09:35:06 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-05-23 09:35:06 INFO  SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-05-23 09:35:06 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-23 09:35:06 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-23 09:42:17 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-23 09:42:17 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-23 09:42:47 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
