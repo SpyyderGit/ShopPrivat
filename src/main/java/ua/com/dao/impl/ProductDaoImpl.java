@@ -45,12 +45,7 @@ public class ProductDaoImpl implements ProductDao {
         this.connection = connection;
     }
 
-    public ProductDaoImpl(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
-    }
 
-    public ProductDaoImpl() {
-    }
 
     public void addProduct(String productName, double productPrice, String productRemark,
                            String sklad, int mrIdFk, int typeIdFk) throws SQLException {

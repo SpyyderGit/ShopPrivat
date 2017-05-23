@@ -1,5 +1,5 @@
 DROP DATABASE Shop;COMMIT ;
-# CREATE SCHEMA Shop;
+CREATE SCHEMA Shop;
 CREATE DATABASE Shop;
 USE Shop;
 create table product_view(view_id int not null primary key auto_increment,

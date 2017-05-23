@@ -17,3 +17,11 @@
 2017-05-23 09:42:17 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
 2017-05-23 09:42:17 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
 2017-05-23 09:42:47 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 00:52:49 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-24 00:52:49 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 00:53:34 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-24 00:53:34 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 00:53:48 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-24 00:53:48 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 00:55:16 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 00:56:36 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
