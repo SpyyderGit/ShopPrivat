@@ -41,6 +41,9 @@
             <li><a href="byId">Filter by id</a></li>
             <li><a href="byName">Filter by name</a></li>
             <li class="active"><a href="#">Filter by sklad</a></li>
+            <li><a href="byType">Filter by type</a></li>
+            <li><a href="byView">Filter by view</a></li>
+            <li><a href="byMr">Filter by manufacture</a></li>
 
         </ul>
     </div>

@@ -15,6 +15,7 @@ import ua.com.dao.impl.ProductMrDaoImpl;
 import ua.com.dao.impl.ProductTypeDaoImpl;
 import ua.com.dao.impl.ProductViewDaoImpl;
 import ua.com.model.Product;
+import ua.com.model.ProductType;
 import ua.com.service.ProductMrService;
 import ua.com.service.ProductService;
 import ua.com.service.ProductTypeService;
@@ -37,15 +38,13 @@ public class SearchController {
     private DBConnector connector = new DBConnector();
 
     private ProductDao productDao = new ProductDaoImpl(connector.jdbcConnect(), connector.templateConnect());
-    private ProductService productService = new ProductServiceImpl(productDao);
-
     private ProductTypeDao productTypeDao = new ProductTypeDaoImpl(connector.templateConnect());
-    private ProductTypeService typeService = new ProductTypeServiceImpl(productTypeDao, productDao);
-
     private ProductViewDao viewDao = new ProductViewDaoImpl(connector.templateConnect());
-    private ProductViewService productViewService = new ProductViewServiceImpl(viewDao, typeService);
-
     private ProductMrDao productMrDao = new ProductMrDaoImpl(connector.templateConnect());
+
+    private ProductService productService = new ProductServiceImpl(productDao, viewDao, productTypeDao, productMrDao);
+    private ProductTypeService typeService = new ProductTypeServiceImpl(productTypeDao, productDao);
+    private ProductViewService productViewService = new ProductViewServiceImpl(viewDao, typeService);
     private ProductMrService productMrService = new ProductMrServiceImpl(productMrDao, productService);
 
 
@@ -73,10 +72,10 @@ public class SearchController {
     @RequestMapping(value = "search/byIdResult", method = RequestMethod.POST)
     public String byIdResult(@ModelAttribute("/WEB-INF/shop-servlet.xml") Product product, ModelMap modelMap) {
         try {
-            modelMap.addAttribute("productName", productService.getByIdService(product.getProductId()).getProductName());
-            modelMap.addAttribute("productPrice", productService.getByIdService(product.getProductId()).getProductPrice());
-            modelMap.addAttribute("productRemark", productService.getByIdService(product.getProductId()).getProductRemark());
-            modelMap.addAttribute("productSklad", productService.getByIdService(product.getProductId()).getSklad());
+            modelMap.addAttribute("productIdName", productService.getByIdService(product.getProductId()).getProductName());
+            modelMap.addAttribute("productIdPrice", productService.getByIdService(product.getProductId()).getProductPrice());
+            modelMap.addAttribute("productIdRemark", productService.getByIdService(product.getProductId()).getProductRemark());
+            modelMap.addAttribute("productIdSklad", productService.getByIdService(product.getProductId()).getSklad());
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -94,10 +93,10 @@ public class SearchController {
     @RequestMapping(value = "search/byNameResult", method = RequestMethod.POST)
     public String byNameResult(@ModelAttribute("/WEB-INF/shop-servlet.xml") Product product, ModelMap modelMap) {
         try {
-            modelMap.addAttribute("productName", productService.getByNameService(product.getProductName()).getProductName());
-            modelMap.addAttribute("productPrice", productService.getByNameService(product.getProductName()).getProductPrice());
-            modelMap.addAttribute("productRemark", productService.getByNameService(product.getProductName()).getProductRemark());
-            modelMap.addAttribute("productSklad", productService.getByNameService(product.getProductName()).getSklad());
+            modelMap.addAttribute("productNameName", productService.getByNameService(product.getProductName()).getProductName());
+            modelMap.addAttribute("productNamePrice", productService.getByNameService(product.getProductName()).getProductPrice());
+            modelMap.addAttribute("productNameRemark", productService.getByNameService(product.getProductName()).getProductRemark());
+            modelMap.addAttribute("productNameSklad", productService.getByNameService(product.getProductName()).getSklad());
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -115,6 +114,19 @@ public class SearchController {
     public String bySkladResult(@ModelAttribute("/WEB-INF/shop-servlet.xml") Product product, ModelMap modelMap) {
         modelMap.addAttribute("sklad", productService.getBySkladService(product.getSklad()));
         return "search/bySkladResult";
+    }
+
+    @RequestMapping(value = "search/byType", method = RequestMethod.GET)
+    public ModelAndView byType() {
+        Product product = new Product();
+        return new ModelAndView("search/byType", "command", product);
+    }
+
+
+    @RequestMapping(value = "search/byTypeResult", method = RequestMethod.POST)
+    public String byTypeResult(@ModelAttribute("/WEB-INF/shop-servlet.xml") Product product, ModelMap modelMap) {
+        modelMap.addAttribute("type", productService.getByTypeService("TV"));
+        return "search/byTypeResult";
     }
 
 }

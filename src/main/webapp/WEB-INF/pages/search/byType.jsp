@@ -1,16 +1,15 @@
 <%--
   Created by IntelliJ IDEA.
-  User: User
-  Date: 23.05.2017
-  Time: 12:53
+  User: oleg
+  Date: 23.05.17
+  Time: 19:51
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <html>
 <head>
-    <title>Title</title>
-
+    <title>Add product</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -21,8 +20,7 @@
 </head>
 <body>
 
-<tr><h2 align="Center">All products</h2></tr>
-
+<h2 align="Center">Update product</h2>
 <nav role="navigation" class="navbar navbar-default">
 
     <!-- Toggle menu for mobile display -->
@@ -38,37 +36,31 @@
     <!-- default menu -->
     <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="productView">show all Product View</a></li>
-            <li><a href="productType">show all Product Type</a></li>
-            <li><a href="manufacturer">show all manufacturer</a></li>
-            <li class="active"><a href="#">show all products</a></li>
-            <li><a href="admin/admin">Admin</a></li>
+            <li><a href="../../">Home</a></li>
+            <li><a href="byPrice">Filter by price</a></li>
+            <li><a href="byId">Filter by id</a></li>
+            <li><a href="byName">Filter by name</a></li>
+            <li><a href="bySklad">Filter by sklad</a></li>
+            <li class="active"><a href="#">Filter by type</a></li>
+            <li><a href="byView">Filter by view</a></li>
+            <li><a href="byMr">Filter by manufacture</a></li>
         </ul>
     </div>
-
 </nav>
 
-
-<table class="table table-striped">
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Remark:</th>
-        <th>Sklad</th>
-    </tr>
-    </thead>
-    <tbody>
-    <c:forEach var="product" items="${price}">
+<form:form method="post" action="byTypeResult">
+    <table align="Center">
         <tr>
-            <td>${product.productName}</td>
-            <td>${product.productPrice}</td>
-            <td>${product.productRemark}</td>
-            <td>${product.sklad}</td>
+            <td><form:label path="typeIdFk">Type</form:label></td>
+            <td><form:input path="typeIdFk"/></td>
+        <tr>
         </tr>
-    </c:forEach>
-    </tbody>
-</table>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Submit"/>
+            </td>
+        </tr>
+    </table>
+</form:form>
 </body>
 </html>

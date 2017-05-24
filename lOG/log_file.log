@@ -75,3 +75,13 @@
 2017-05-24 22:45:19 INFO  ProductMrDaoImpl:160 - In sklad found:  1 products
 2017-05-24 22:45:28 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
 2017-05-24 22:45:28 INFO  ProductMrDaoImpl:160 - In sklad found:  5 products
+2017-05-24 23:44:52 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 23:44:52 INFO  ProductMrDaoImpl:160 - In sklad found:  5 products
+2017-05-24 23:50:42 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 23:51:03 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 23:54:27 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 23:54:27 INFO  ProductMrDaoImpl:181 - 7 products finded
+2017-05-24 23:54:54 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 23:54:54 INFO  ProductMrDaoImpl:181 - 7 products finded
+2017-05-25 00:01:56 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-25 00:01:56 INFO  ProductMrDaoImpl:181 - 7 products finded

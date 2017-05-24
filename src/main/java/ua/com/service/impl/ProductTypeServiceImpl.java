@@ -51,7 +51,7 @@ public class ProductTypeServiceImpl implements ProductTypeService {
     }
 
     @Override
-    public List<ProductType> getByNameTypeService(String name) {
+    public ProductType getByNameTypeService(String name) {
         return productTypeDao.getByName(name);
     }
 

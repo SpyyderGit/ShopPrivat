@@ -2,12 +2,16 @@ package ua.com.service.impl;
 
 import org.apache.log4j.Logger;
 import ua.com.dao.ProductDao;
+import ua.com.dao.ProductMrDao;
+import ua.com.dao.ProductTypeDao;
+import ua.com.dao.ProductViewDao;
 import ua.com.dao.impl.ProductDaoImpl;
 import ua.com.dao.impl.ProductMrDaoImpl;
 import ua.com.model.Product;
 import ua.com.service.ProductService;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,6 +21,17 @@ public class ProductServiceImpl implements ProductService {
 
     private static final Logger log = Logger.getLogger(ProductDaoImpl.class);
     private ProductDao productDao;
+    private ProductViewDao productViewDao;
+    private ProductTypeDao productTypeDao;
+    private ProductMrDao productMrDao;
+
+    public ProductServiceImpl(ProductDao productDao, ProductViewDao productViewDao, ProductTypeDao productTypeDao, ProductMrDao productMrDao) {
+        this.productDao = productDao;
+        this.productViewDao = productViewDao;
+        this.productTypeDao = productTypeDao;
+        this.productMrDao = productMrDao;
+    }
+
 
     public ProductServiceImpl(ProductDao productDao) {
         this.productDao = productDao;
@@ -61,6 +76,30 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> getBySkladService(String sklad) {
         return productDao.getBySklad(sklad);
+    }
+
+    @Override
+    public List<Product> getByTypeService(String type) {
+        List<Product> productList = new ArrayList<>();
+        int typeId = productTypeDao.getByName(type).getTypeId();
+
+        for (Product p : productDao.getAllProducts()) {
+            if (p.getTypeIdFk() == typeId) {
+                productList.add(p);
+            }
+        }
+
+        return productList;
+    }
+
+    @Override
+    public List<Product> getByViewService(String view) {
+        return null;
+    }
+
+    @Override
+    public List<Product> getByMrService(String view) {
+        return null;
     }
 
     @Override

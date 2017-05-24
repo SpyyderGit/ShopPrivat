@@ -51,8 +51,8 @@ public class ProductTypeDaoImpl implements ProductTypeDao {
         return productType;
     }
 
-    public List<ProductType> getByName(String name) {
-        List<ProductType> types = jdbcTemplate.query(SQL_GET_BY_NAME, new Object[]{name}, new TypeRowMap());
+    public ProductType getByName(String name) {
+        ProductType types = jdbcTemplate.queryForObject(SQL_GET_BY_NAME, new Object[]{name}, new TypeRowMap());
         return types;
     }
 

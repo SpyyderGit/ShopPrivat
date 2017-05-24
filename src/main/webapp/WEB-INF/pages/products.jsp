@@ -43,6 +43,7 @@
             <li><a href="productType">show all Product Type</a></li>
             <li><a href="manufacturer">show all manufacturer</a></li>
             <li class="active"><a href="#">show all products</a></li>
+            <li><a href="search/byPrice">Search menu</a></li>
             <li><a href="admin/admin">Admin</a></li>
         </ul>
     </div>
@@ -60,12 +61,12 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="product" items="${name}">
+    <c:forEach var="productType" items="${name}">
         <tr>
-            <td>${product.productName}</td>
-            <td>${product.productPrice}</td>
-            <td>${product.productRemark}</td>
-            <td>${product.sklad}</td>
+            <td>${productType.productName}</td>
+            <td>${productType.productPrice}</td>
+            <td>${productType.productRemark}</td>
+            <td>${productType.sklad}</td>
         </tr>
     </c:forEach>
     </tbody>

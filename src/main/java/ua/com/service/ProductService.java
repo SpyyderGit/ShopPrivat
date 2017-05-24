@@ -24,5 +24,11 @@ public interface ProductService {
 
     List<Product> getBySkladService(String sklad);
 
+    List<Product> getByTypeService(String type);
+
+    List<Product> getByViewService(String view);
+
+    List<Product> getByMrService(String view);
+
     List<Product> getAllProductsService();
 }

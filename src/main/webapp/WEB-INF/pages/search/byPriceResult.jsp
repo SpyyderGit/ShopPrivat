@@ -43,6 +43,9 @@
             <li><a href="byId">Filter by id</a></li>
             <li><a href="byName">Filter by name</a></li>
             <li><a href="bySklad">Filter by sklad</a></li>
+            <li><a href="byType">Filter by type</a></li>
+            <li><a href="byView">Filter by view</a></li>
+            <li><a href="byMr">Filter by manufacture</a></li>
         </ul>
     </div>
 </nav>
@@ -58,12 +61,12 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="product" items="${price}">
+    <c:forEach var="productPrice" items="${price}">
         <tr>
-            <td>${product.productName}</td>
-            <td>${product.productPrice}</td>
-            <td>${product.productRemark}</td>
-            <td>${product.sklad}</td>
+            <td>${productPrice.productName}</td>
+            <td>${productPrice.productPrice}</td>
+            <td>${productPrice.productRemark}</td>
+            <td>${productPrice.sklad}</td>
         </tr>
     </c:forEach>
     </tbody>

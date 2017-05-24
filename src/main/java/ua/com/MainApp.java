@@ -40,11 +40,6 @@ public class MainApp {
 
         ProductMr mr = new ProductMr(4, "Sonia");
 
-        ProductService productService = new ProductServiceImpl(productDao);
-
-        ProductMrService productMrService = new ProductMrServiceImpl(mrDao, productService);
-
-//            System.out.println(productMrService.getAllMr());
 
         ProductTypeDao productTypeDao = new ProductTypeDaoImpl(connection.templateConnect());
         ProductTypeService typeService = new ProductTypeServiceImpl(productTypeDao, productDao);
@@ -54,34 +49,15 @@ public class MainApp {
         productType.setIdView(3);
         typeService.addProductTypeService(productType);
 
-
         ProductViewDao productViewDao = new ProductViewDaoImpl(connection.templateConnect());
         ProductViewService productViewService = new ProductViewServiceImpl(productViewDao, typeService);
+        ProductMrDao productMrDao = new ProductMrDaoImpl(connection.templateConnect());
 
+        ProductService productService = new ProductServiceImpl(productDao, productViewDao, productTypeDao, productMrDao);
 
-        System.out.println(productService.getBySkladService("Y"));
+        ProductMrService productMrService = new ProductMrServiceImpl(mrDao, productService);
 
-//        System.out.println(productViewService.getAllProductsViewService());
-
-
-//            productViewService.deleteProductTypeService(3);
-
-//            ProductTypeDao typeDao = new ProductTypeDaoImpl(jdbcTemplate);
-//            System.out.println(typeDao.getAllTypes());
-
-
-        //            productMrService.deleteProductMrService(3);
-
-
-        //            System.out.println(mrDao.getAllName());
-
-//            System.out.println(productDao.getAllProducts());
-
-
-        //            productDao.deleteProduct(3);
-//            System.out.println(productDao.getAllProducts());
-
-//            productDao.updateProduct(new Product(2, "Samsung XP 3", 15000.00, "TV", "Y", 1, 1));
+        System.out.println(productService.getByTypeService("TV"));
 
 
     }

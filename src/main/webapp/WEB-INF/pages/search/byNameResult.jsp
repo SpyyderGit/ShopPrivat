@@ -43,6 +43,9 @@
             <li><a href="byId">Filter by id</a></li>
             <li class="active"><a href="byName">Filter by name</a></li>
             <li><a href="bySklad">Filter by sklad</a></li>
+            <li><a href="byType">Filter by type</a></li>
+            <li><a href="byView">Filter by view</a></li>
+            <li><a href="byMr">Filter by manufacture</a></li>
         </ul>
     </div>
 </nav>
@@ -59,10 +62,10 @@
     </thead>
     <tbody>
     <tr>
-        <td>${productName}</td>
-        <td>${productPrice}</td>
-        <td>${productRemark}</td>
-        <td>${productSklad}</td>
+        <td>${productNameName}</td>
+        <td>${productNamePrice}</td>
+        <td>${productNameRemark}</td>
+        <td>${productNameSklad}</td>
     </tr>
     </tbody>
 </table>

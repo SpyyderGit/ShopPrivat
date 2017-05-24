@@ -41,6 +41,7 @@
             <li><a href="productType">show all Product Type</a></li>
             <li class="active"><a href="#">show all manufacturer</a></li>
             <li><a href="products">show all products</a></li>
+            <li><a href="search/byPrice">Search menu</a></li>
             <li><a href="admin/admin">Admin</a></li>
         </ul>
     </div>

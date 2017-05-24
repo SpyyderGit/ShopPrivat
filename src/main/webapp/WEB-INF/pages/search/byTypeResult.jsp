@@ -1,15 +1,16 @@
 <%--
   Created by IntelliJ IDEA.
-  User: oleg
-  Date: 23.05.17
-  Time: 19:51
+  User: User
+  Date: 23.05.2017
+  Time: 12:53
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>Add product</title>
+    <title>Title</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -20,7 +21,8 @@
 </head>
 <body>
 
-<h2 align="Center">Update product</h2>
+<tr><h2 align="Center">All products</h2></tr>
+
 <nav role="navigation" class="navbar navbar-default">
 
     <!-- Toggle menu for mobile display -->
@@ -36,28 +38,39 @@
     <!-- default menu -->
     <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-            <li><a href="../">Home</a></li>
-            <li><a href="addProduct">Create</a></li>
-            <li><a href="updateProduct">Update</a></li>
-            <li class="active"><a href="#">Delete</a></li>
-
+            <li><a href="../../">Home</a></li>
+            <li><a href="byPrice">Filter by price</a></li>
+            <li><a href="byId">Filter by id</a></li>
+            <li><a href="byName">Filter by name</a></li>
+            <li><a href="bySklad">Filter by sklad</a></li>
+            <li class="active"><a href="byType">Filter by type</a></li>
+            <li><a href="byView">Filter by view</a></li>
+            <li><a href="byMr">Filter by manufacture</a></li>
         </ul>
     </div>
 </nav>
 
-<form:form method="post" action="delResult">
-    <table align="Center">
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Remark:</th>
+        <th>Sklad:</th>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach var="productType" items="${type}">
         <tr>
-            <td><form:label path="productId">ID</form:label></td>
-            <td><form:input path="productId"/></td>
-        <tr>
+            <td>${typeName}</td>
+            <td>${productType.productName}</td>
+            <td>${productType.productPrice}</td>
+            <td>${productType.productRemark}</td>
+            <td>${productType.sklad}</td>
         </tr>
-        <tr>
-            <td colspan="2">
-                <input type="submit" value="Submit"/>
-            </td>
-        </tr>
-    </table>
-</form:form>
+    </c:forEach>
+    </tbody>
+</table>
 </body>
 </html>

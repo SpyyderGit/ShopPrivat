@@ -18,7 +18,7 @@ public interface ProductTypeService {
 
     ProductType getByIdTypeService(int id);
 
-    List<ProductType> getByNameTypeService(String name);
+    ProductType getByNameTypeService(String name);
 
     List<ProductType> getAllProductsTypeService();
 }
