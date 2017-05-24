@@ -1,14 +1,10 @@
 package ua.com.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.datasource.SimpleDriverDataSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import ua.com.dao.ProductDao;
 import ua.com.dao.ProductMrDao;
@@ -19,7 +15,6 @@ import ua.com.dao.impl.ProductMrDaoImpl;
 import ua.com.dao.impl.ProductTypeDaoImpl;
 import ua.com.dao.impl.ProductViewDaoImpl;
 import ua.com.model.Product;
-import ua.com.model.ProductMr;
 import ua.com.service.ProductMrService;
 import ua.com.service.ProductService;
 import ua.com.service.ProductTypeService;
@@ -29,12 +24,6 @@ import ua.com.service.impl.ProductServiceImpl;
 import ua.com.service.impl.ProductTypeServiceImpl;
 import ua.com.service.impl.ProductViewServiceImpl;
 import ua.com.utils.DBConnector;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by User on 22.05.2017.
@@ -88,18 +77,5 @@ public class ShopController {
         return "products";
     }
 
-    @RequestMapping(value = "/byPrice", method = RequestMethod.GET)
-    public ModelAndView byPrice() {
-        Product product = new Product();
-        return new ModelAndView("byPrice", "command", product);
-    }
 
-
-    @RequestMapping(value = "/byPriceResult", method = RequestMethod.POST)
-    public String byPriceResult(@ModelAttribute("/WEB-INF/shop-servlet.xml") Product product, ModelMap modelMap) {
-
-        modelMap.addAttribute("price", productService.getByPriceService(product.getProductPrice()));
-
-        return "byPriceResult";
-    }
 }

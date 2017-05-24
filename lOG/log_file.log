@@ -25,3 +25,53 @@
 2017-05-24 00:53:48 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
 2017-05-24 00:55:16 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
 2017-05-24 00:56:36 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 01:09:33 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-05-24 01:09:33 INFO  SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-05-24 01:09:33 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-24 01:09:33 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 01:10:00 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-05-24 01:10:01 INFO  SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-05-24 01:10:01 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-24 01:10:01 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 01:10:50 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-05-24 01:10:50 INFO  SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-05-24 01:10:50 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-24 01:10:50 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 01:11:32 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-05-24 01:11:32 INFO  SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-05-24 01:11:32 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-24 01:11:32 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 01:13:10 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-05-24 01:13:10 INFO  SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-05-24 01:13:10 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-24 01:13:10 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 01:14:26 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-05-24 01:14:26 INFO  SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-05-24 01:14:26 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-24 01:14:26 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 01:14:52 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-05-24 01:14:52 INFO  SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-05-24 01:14:52 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-24 01:14:52 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 01:15:42 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-05-24 01:15:42 INFO  SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-05-24 01:15:42 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-24 01:15:42 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 01:16:07 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-05-24 01:16:08 INFO  SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-05-24 01:16:08 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-24 01:16:08 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 01:17:24 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-05-24 01:17:24 INFO  SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-05-24 01:17:24 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-24 01:17:24 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 07:03:46 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-05-24 07:03:47 INFO  SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-05-24 07:03:47 ERROR ProductTypeDaoImpl:36 - ProductType{typeId=0, typeName='PC', idView=3} isn't add
+2017-05-24 07:03:47 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 22:43:12 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 22:43:12 INFO  ProductMrDaoImpl:160 - In sklad found:  5 products
+2017-05-24 22:45:19 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 22:45:19 INFO  ProductMrDaoImpl:160 - In sklad found:  1 products
+2017-05-24 22:45:28 INFO  ProductTypeServiceImpl:30 - add ProductType{typeId=0, typeName='PC', idView=3} successfull
+2017-05-24 22:45:28 INFO  ProductMrDaoImpl:160 - In sklad found:  5 products

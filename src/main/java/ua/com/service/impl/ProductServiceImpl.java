@@ -59,6 +59,11 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public List<Product> getBySkladService(String sklad) {
+        return productDao.getBySklad(sklad);
+    }
+
+    @Override
     public List<Product> getAllProductsService() {
         return productDao.getAllProducts();
     }

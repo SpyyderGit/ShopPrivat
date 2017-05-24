@@ -59,7 +59,9 @@ public class MainApp {
         ProductViewService productViewService = new ProductViewServiceImpl(productViewDao, typeService);
 
 
-        System.out.println(productViewService.getAllProductsViewService());
+        System.out.println(productService.getBySkladService("Y"));
+
+//        System.out.println(productViewService.getAllProductsViewService());
 
 
 //            productViewService.deleteProductTypeService(3);

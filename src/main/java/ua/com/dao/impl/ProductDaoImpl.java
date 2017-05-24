@@ -23,11 +23,11 @@ public class ProductDaoImpl implements ProductDao {
     private PreparedStatement statement = null;
     private Product product = null;
 
-    private final String SQL_UPDATE = "update product " +
-            "set name = ?,price = ?,remark = ?,sklad = ?, fk_id_mr = ?, fk_id_type = ?" +
+    private final String SQL_UPDATE = "UPDATE product " +
+            "SET name = ?,price = ?,remark = ?,sklad = ?, fk_id_mr = ?, fk_id_type = ?" +
             " WHERE product_id = ?";
 
-    private final String SQL_DELETE = "DELETE FROM product where product_id = ?";
+    private final String SQL_DELETE = "DELETE FROM product WHERE product_id = ?";
     private final String SQL_INSERT = "INSERT INTO product(name,price,remark," +
             "sklad,fk_id_mr," +
             "fk_id_type) " +
@@ -36,6 +36,8 @@ public class ProductDaoImpl implements ProductDao {
     private final String SQL_GET_BY_ID = "SELECT * FROM product WHERE product_id = ?";
     private final String SQL_GET_BY_NAME = "SELECT * FROM product WHERE name = ?";
     private final String SQL_GET_BY_PRICE = "SELECT * FROM product WHERE price = ?";
+    private final String SQL_GET_BY_SKLAD = "SELECT * FROM product WHERE sklad = ?";
+
     private final String SQL_GET_ALL = "SELECT * FROM product";
     private JdbcTemplate jdbcTemplate;
 
@@ -44,7 +46,6 @@ public class ProductDaoImpl implements ProductDao {
         this.jdbcTemplate = jdbcTemplate;
         this.connection = connection;
     }
-
 
 
     public void addProduct(String productName, double productPrice, String productRemark,
@@ -139,6 +140,29 @@ public class ProductDaoImpl implements ProductDao {
         } catch (SQLException e) {
             log.error("Products with price:  " + price + " isn't find");
         }
+
+        return productList;
+    }
+
+    @Override
+    public List<Product> getBySklad(String sklad) {
+        List<Product> productList = new ArrayList<>();
+        try {
+            statement = connection.prepareStatement(SQL_GET_BY_SKLAD);
+            statement.setString(1, sklad);
+            ResultSet set = statement.executeQuery();
+            while (set.next()) {
+                productList.add(new Product(set.getInt("product_id"), set.getString("name"),
+                        set.getDouble("price"), set.getString("remark"),
+                        set.getString("sklad"), set.getInt("fk_id_mr"),
+                        set.getInt("fk_id_type")));
+            }
+            log.info("In sklad found:  " + productList.size() + " products");
+
+        } catch (SQLException e) {
+            log.error("In sklad found:  " + productList.size() + " products");
+        }
+
 
         return productList;
     }

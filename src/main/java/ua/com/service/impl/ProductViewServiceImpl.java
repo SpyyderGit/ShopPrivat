@@ -23,9 +23,9 @@ public class ProductViewServiceImpl implements ProductViewService {
 
     @Override
     public void addProductViewService(ProductView productView) {
+
         productViewDao.addProductView(productView);
     }
-
     @Override
     public void deleteProductTypeService(int id) {
         for (ProductType p : productTypeService.getAllProductsTypeService()) {

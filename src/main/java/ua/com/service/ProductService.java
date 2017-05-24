@@ -22,5 +22,7 @@ public interface ProductService {
 
     List<Product> getByPriceService(double price);
 
+    List<Product> getBySkladService(String sklad);
+
     List<Product> getAllProductsService();
 }
