@@ -13,7 +13,7 @@ import java.sql.SQLException;
 public class DBConnector {
     private String url = "jdbc:mysql://localhost:3306/Shop";
     private String name = "root";
-    private String pass = "123";
+    private String pass = "290731";
 
     public JdbcTemplate templateConnect() {
 
