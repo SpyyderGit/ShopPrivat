@@ -61,12 +61,13 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="productType" items="${name}">
+    <c:forEach var="products" items="${name}">
         <tr>
-            <td>${productType.productName}</td>
-            <td>${productType.productPrice}</td>
-            <td>${productType.productRemark}</td>
-            <td>${productType.sklad}</td>
+            <td>${products.productId}</td>
+            <td>${products.productName}</td>
+            <td>${products.productPrice}</td>
+            <td>${products.productRemark}</td>
+            <td>${products.sklad}</td>
         </tr>
     </c:forEach>
     </tbody>
