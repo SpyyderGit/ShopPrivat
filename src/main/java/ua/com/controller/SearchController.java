@@ -144,7 +144,6 @@ public class SearchController {
         return "search/byViewResult";
     }
 
-
     @RequestMapping(value = "search/byMr", method = RequestMethod.GET)
     public ModelAndView byMr() {
         ProductMr product = new ProductMr();
