@@ -8,6 +8,7 @@ import ua.com.dao.ProductViewDao;
 import ua.com.dao.impl.ProductDaoImpl;
 import ua.com.dao.impl.ProductMrDaoImpl;
 import ua.com.model.Product;
+import ua.com.model.ProductType;
 import ua.com.service.ProductService;
 
 import java.sql.SQLException;
@@ -94,12 +95,37 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<Product> getByViewService(String view) {
-        return null;
+        List<Product> productList = new ArrayList<>();
+        int viewId = productViewDao.getByName(view).getProductId();
+        int key = 0;
+
+        for (ProductType t : productTypeDao.getAllTypes()) {
+            if (t.getIdView() == viewId) {
+                key = t.getTypeId();
+                break;
+            }
+        }
+
+        for (Product p : productDao.getAllProducts()) {
+            if (p.getTypeIdFk() == key) {
+                productList.add(p);
+            }
+        }
+        return productList;
     }
 
     @Override
-    public List<Product> getByMrService(String view) {
-        return null;
+    public List<Product> getByMrService(String mr) {
+        List<Product> productList = new ArrayList<>();
+        int mrId = productMrDao.getByName(mr).getMrId();
+
+        for (Product p : productDao.getAllProducts()) {
+            if (p.getMrIdFk() == mrId) {
+                productList.add(p);
+            }
+        }
+
+        return productList;
     }
 
     @Override

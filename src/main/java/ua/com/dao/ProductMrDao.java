@@ -17,7 +17,7 @@ public interface ProductMrDao {
 
     ProductMr getById(int id);
 
-    List<ProductMr> getByName(String name);
+    ProductMr getByName(String name);
 
     List<ProductMr> getAllName();
 

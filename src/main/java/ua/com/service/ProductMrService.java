@@ -18,7 +18,7 @@ public interface ProductMrService {
 
     ProductMr getByIdMrService(int idMr) throws SQLException;
 
-    List<ProductMr> getByNameMrService(String nameMr) throws SQLException;
+    ProductMr getByNameMrService(String nameMr) throws SQLException;
 
     List<ProductMr> getAllMr();
 }

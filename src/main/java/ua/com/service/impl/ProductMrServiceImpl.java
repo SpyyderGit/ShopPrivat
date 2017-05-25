@@ -55,7 +55,7 @@ public class ProductMrServiceImpl implements ProductMrService {
     }
 
     @Override
-    public List<ProductMr> getByNameMrService(String nameMr) throws SQLException {
+    public ProductMr getByNameMrService(String nameMr) throws SQLException {
         return productMrDao.getByName(nameMr);
     }
 

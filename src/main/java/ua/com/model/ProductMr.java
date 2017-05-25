@@ -7,8 +7,8 @@ public class ProductMr {
     private int mrId;
     private String mrName;
 
-    public ProductMr(String mrName) {
-        this.mrName = mrName;
+    public ProductMr() {
+
     }
 
     public ProductMr(int mrId, String mrName) {

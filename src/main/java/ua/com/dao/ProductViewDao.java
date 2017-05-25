@@ -18,7 +18,7 @@ public interface ProductViewDao {
 
     ProductView getById(int id);
 
-    List<ProductView> getByName(String name);
+    ProductView getByName(String name);
 
     List<ProductView> getAll();
 

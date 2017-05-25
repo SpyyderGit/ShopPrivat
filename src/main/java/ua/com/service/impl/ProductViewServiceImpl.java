@@ -47,7 +47,7 @@ public class ProductViewServiceImpl implements ProductViewService {
     }
 
     @Override
-    public List<ProductView> getByNameViewService(String name) {
+    public ProductView getByNameViewService(String name) {
         return productViewDao.getByName(name);
     }
 

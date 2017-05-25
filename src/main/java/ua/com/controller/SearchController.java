@@ -15,7 +15,9 @@ import ua.com.dao.impl.ProductMrDaoImpl;
 import ua.com.dao.impl.ProductTypeDaoImpl;
 import ua.com.dao.impl.ProductViewDaoImpl;
 import ua.com.model.Product;
+import ua.com.model.ProductMr;
 import ua.com.model.ProductType;
+import ua.com.model.ProductView;
 import ua.com.service.ProductMrService;
 import ua.com.service.ProductService;
 import ua.com.service.ProductTypeService;
@@ -118,15 +120,42 @@ public class SearchController {
 
     @RequestMapping(value = "search/byType", method = RequestMethod.GET)
     public ModelAndView byType() {
-        Product product = new Product();
+        ProductType product = new ProductType();
         return new ModelAndView("search/byType", "command", product);
     }
 
 
     @RequestMapping(value = "search/byTypeResult", method = RequestMethod.POST)
-    public String byTypeResult(@ModelAttribute("/WEB-INF/shop-servlet.xml") Product product, ModelMap modelMap) {
-        modelMap.addAttribute("type", productService.getByTypeService("TV"));
+    public String byTypeResult(@ModelAttribute("/WEB-INF/shop-servlet.xml") ProductType product, ModelMap modelMap) {
+        modelMap.addAttribute("type", productService.getByTypeService(product.getTypeName()));
         return "search/byTypeResult";
+    }
+
+    @RequestMapping(value = "search/byView", method = RequestMethod.GET)
+    public ModelAndView byView() {
+        ProductView product = new ProductView();
+        return new ModelAndView("search/byView", "command", product);
+    }
+
+
+    @RequestMapping(value = "search/byViewResult", method = RequestMethod.POST)
+    public String byViewResult(@ModelAttribute("/WEB-INF/shop-servlet.xml") ProductView product, ModelMap modelMap) {
+        modelMap.addAttribute("view", productService.getByViewService(product.getProductName()));
+        return "search/byViewResult";
+    }
+
+
+    @RequestMapping(value = "search/byMr", method = RequestMethod.GET)
+    public ModelAndView byMr() {
+        ProductMr product = new ProductMr();
+        return new ModelAndView("search/byMr", "command", product);
+    }
+
+
+    @RequestMapping(value = "search/byMrResult", method = RequestMethod.POST)
+    public String byMrResult(@ModelAttribute("/WEB-INF/shop-servlet.xml") ProductMr product, ModelMap modelMap) {
+        modelMap.addAttribute("mr", productService.getByMrService(product.getMrName()));
+        return "search/byMrResult";
     }
 
 }

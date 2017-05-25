@@ -57,7 +57,7 @@ public class MainApp {
 
         ProductMrService productMrService = new ProductMrServiceImpl(mrDao, productService);
 
-        System.out.println(productService.getByTypeService("TV"));
+        System.out.println(productService.getByMrService("Sony"));
 
 
     }

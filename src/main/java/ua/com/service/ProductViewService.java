@@ -18,7 +18,7 @@ public interface ProductViewService {
 
     ProductView getByIdViewService(int id);
 
-    List<ProductView> getByNameViewService(String name);
+    ProductView getByNameViewService(String name);
 
     List<ProductView> getAllProductsViewService();
 }

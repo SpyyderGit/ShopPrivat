@@ -24,8 +24,8 @@ public class ProductViewDaoImpl implements ProductViewDao {
     private final String SQL_DELETE_VIEW = "DELETE FROM product_view WHERE view_id = ?";
     private final String SQL_UPDATE_VIEW = "UPDATE product_view SET view_name = ? WHERE view_id = ?";
     private final String SQL_GET_BY_ID = "SELECT * FROM product_view WHERE view_id = ?";
-    private final String SQL_GET_BY_NAME = "SELECT * FROM product_view WHERE name = ?";
-    private final String SQL_GET_ALL = "select * from product_view";
+    private final String SQL_GET_BY_NAME = "SELECT DISTINCT * FROM product_view WHERE view_name = ?";
+    private final String SQL_GET_ALL = "SELECT * FROM product_view";
 
     public ProductViewDaoImpl(JdbcTemplate jdbcTemplate) {
 
@@ -49,8 +49,8 @@ public class ProductViewDaoImpl implements ProductViewDao {
         return productView;
     }
 
-    public List<ProductView> getByName(String name) {
-        List<ProductView> views = jdbcTemplate.query(SQL_GET_BY_NAME, new Object[]{name}, new RowMapView());
+    public ProductView getByName(String name) {
+        ProductView views = jdbcTemplate.queryForObject(SQL_GET_BY_NAME, new Object[]{name}, new RowMapView());
         return views;
     }
 

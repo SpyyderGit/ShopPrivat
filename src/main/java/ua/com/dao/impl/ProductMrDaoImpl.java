@@ -28,14 +28,14 @@ public class ProductMrDaoImpl implements ProductMrDao {
     }
 
     // SQL-Scripts
-    private final String SQL_ADD_MR = "INSERT INTO manufacturer(mr_name) values(?)";
-    private final String SQL_DELETE_MR = "DELETE FROM manufacturer where mr_id = ?";
+    private final String SQL_ADD_MR = "INSERT INTO manufacturer(mr_name) VALUES(?)";
+    private final String SQL_DELETE_MR = "DELETE FROM manufacturer WHERE mr_id = ?";
     private final String SQL_UPDATE_MR = "UPDATE manufacturer " +
             "SET mr_name = ?" +
-            " where mr_id = ?";
-    private final String SQL_GET_ID = "select * from manufacturer where mr_id = ?";
+            " WHERE mr_id = ?";
+    private final String SQL_GET_ID = "SELECT * FROM manufacturer WHERE mr_id = ?";
     private final String SQL_GET_NAME = "select * from manufacturer where mr_name = ?";
-    private final String SQL_GET_ALL = "select * from manufacturer";
+    private final String SQL_GET_ALL = "SELECT * FROM manufacturer";
 
 
     public void addProductMr(String productMr) {
@@ -69,9 +69,9 @@ public class ProductMrDaoImpl implements ProductMrDao {
     }
 
 
-    public List<ProductMr> getByName(String name) {
-        List<ProductMr> mrList = jdbcTemplate.query(SQL_GET_NAME, new Object[]{name}, new ProductMrMaper());
-        return mrList;
+    public ProductMr getByName(String name) {
+        ProductMr mr = jdbcTemplate.queryForObject(SQL_GET_NAME, new Object[]{name}, new ProductMrMaper());
+        return mr;
     }
 
 

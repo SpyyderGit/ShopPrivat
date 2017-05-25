@@ -51,8 +51,8 @@
 <form:form method="post" action="byTypeResult">
     <table align="Center">
         <tr>
-            <td><form:label path="typeIdFk">Type</form:label></td>
-            <td><form:input path="typeIdFk"/></td>
+            <td><form:label path="typeName">Type</form:label></td>
+            <td><form:input path="typeName"/></td>
         <tr>
         </tr>
         <tr>
@@ -62,5 +62,6 @@
         </tr>
     </table>
 </form:form>
+
 </body>
 </html>
