@@ -137,6 +137,7 @@ public class SearchController {
         return new ModelAndView("search/byView", "command", product);
     }
 
+
     @RequestMapping(value = "search/byViewResult", method = RequestMethod.POST)
     public String byViewResult(@ModelAttribute("/WEB-INF/shop-servlet.xml") ProductView product, ModelMap modelMap) {
         modelMap.addAttribute("view", productService.getByViewService(product.getProductName()));
